@@ -4,6 +4,7 @@ import ProjectCard from "./ProjectCard";
 import ProjectTag from "./ProjectTag";
 import { motion, useInView } from "framer-motion";
 
+
 const projectsData = [
     {
         id: 1,
