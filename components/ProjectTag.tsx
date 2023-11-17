@@ -1,9 +1,13 @@
 import React from "react";
 
-const ProjectTag = ({ name, onClick, isSelected }) => {
-  const buttonStyles = isSelected
-    ? "border-primary-500"
-    : "border-slate-600";
+interface ProjectTagProps {
+  name: string;
+  onClick: (name: string) => void;
+  isSelected: boolean;
+}
+
+const ProjectTag: React.FC<ProjectTagProps> = ({ name, onClick, isSelected }) => {
+  const buttonStyles = isSelected ? "border-primary-500" : "border-slate-600";
   return (
     <button
       className={`${buttonStyles} rounded-full border-2 px-6 py-3 text-xl cursor-pointer`}
